@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "175859460269",
+    "project_id": "runnerfix-e5c72",
+    "storage_bucket": "runnerfix-e5c72.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175859460269:android:9ee91d7d6c90683b313e24",
+        "android_client_info": {
+          "package_name": "com.Nostiia.RunnerFix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKMQVO6oETH3eGNqaF9sM5V6VI01ZEaIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
