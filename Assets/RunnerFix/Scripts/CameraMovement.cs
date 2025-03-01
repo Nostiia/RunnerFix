@@ -6,10 +6,6 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform _player;
     private float _cameraPositionZ = -1.45f;
-    void Start()
-    {
-        
-    }
 
     void LateUpdate()
     {

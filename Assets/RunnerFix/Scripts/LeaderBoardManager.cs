@@ -24,6 +24,7 @@ public class LeaderBoardManager : MonoBehaviour
         _mainMenuCanvas.SetActive(true);
         _leaderboardPanel.SetActive(false);
 
+
         await InitializeFirebase();
         // Check if a user is logged in and get the current user ID
         _currentUserID = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser.UserId;
@@ -177,7 +178,9 @@ public class LeaderBoardManager : MonoBehaviour
             Debug.LogError("Database reference is null! Firebase might not be initialized.");
             return;
         }
+        MainMenuUIManager mainMenuUIManager = FindObjectOfType<MainMenuUIManager>();
         _leaderboardPanel.SetActive(true);
+        mainMenuUIManager.LeaderboardPanel(true);
         _mainMenuCanvas.SetActive(false);
         FetchLeaderboardData();
         FetchCurrentUserInfo();
@@ -185,8 +188,13 @@ public class LeaderBoardManager : MonoBehaviour
     }
     public void BackToMain()
     {
+        MainMenuUIManager mainMenuUIManager = FindObjectOfType<MainMenuUIManager>();
         _leaderboardPanel.SetActive(false);
+        
         _mainMenuCanvas.SetActive(true);
+        mainMenuUIManager.LeaderboardPanel(false);
+
+        StartCoroutine(mainMenuUIManager.DelayInputDetection());
         foreach (Transform child in _leaderboardContent)
         {
             Destroy(child.gameObject);

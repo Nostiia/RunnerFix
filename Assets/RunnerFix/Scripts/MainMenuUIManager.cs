@@ -7,9 +7,8 @@ public class MainMenuUIManager : MonoBehaviour
 {
     [SerializeField] private GameObject _mainMenuCanvas;
     [SerializeField] private GameObject _gameMenuCanvas;
-
-    [SerializeField] private GameObject _leaderboardPanel; 
     private bool _gameStarted = false;
+    private bool _leaderboard = false;
     void Start()
     {
         _gameMenuCanvas.SetActive(false);
@@ -19,11 +18,15 @@ public class MainMenuUIManager : MonoBehaviour
     {
         if (!_gameStarted && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
         {
-            if (!IsPointerOverUI() && !_leaderboardPanel.activeSelf) 
+            if (!IsPointerOverUI() && !_leaderboard) 
             {
                 StartGame();
             }
         }
+    }
+    public void LeaderboardPanel(bool activated)
+    {
+        _leaderboard = activated;
     }
     public void StartGame()
     {
@@ -58,5 +61,13 @@ public class MainMenuUIManager : MonoBehaviour
 
         return false;
     }
-    
+
+    public IEnumerator DelayInputDetection()
+    {
+        _gameStarted = true; // Temporarily block input
+        yield return new WaitForSeconds(0.3f); // Short delay
+        _gameStarted = false; // Re-enable input detection
+    }
+
+
 }

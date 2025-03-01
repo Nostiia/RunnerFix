@@ -1985,7 +1985,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenuCanvas: {fileID: 1176858860}
   _gameMenuCanvas: {fileID: 1166469459}
-  _leaderboardPanel: {fileID: 1693644705}
 --- !u!4 &1266413536
 Transform:
   m_ObjectHideFlags: 0
