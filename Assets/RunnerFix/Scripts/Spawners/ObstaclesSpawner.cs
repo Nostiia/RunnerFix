@@ -7,10 +7,10 @@ public class ObstaclesSpawner : MonoBehaviour
     [SerializeField] private ObjectPoolContainer _oblectPool;
     [SerializeField] private Transform _player;
 
-    [SerializeField] private float _spawnInterval = 2f;
+    [SerializeField] private float _spawnInterval = 7f;
 
-    [SerializeField] private float _mindistanceAheadPlayer = 20f;
-    [SerializeField] private float _maxdistanceAheadPlayer = 40f;
+    [SerializeField] private float _mindistanceAheadPlayer = 50f;
+    [SerializeField] private float _maxdistanceAheadPlayer = 70f;
 
     private float _nextSpawningTime = 0f;
 

@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.032502633, g: 0.08702851, b: 0.3132075, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -243,9 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oblectPool: {fileID: 938684304}
   _player: {fileID: 1928240276}
-  _spawnInterval: 5
-  _mindistanceAheadPlayer: 20
-  _maxdistanceAheadPlayer: 40
+  _spawnInterval: 7
+  _mindistanceAheadPlayer: 50
+  _maxdistanceAheadPlayer: 70
   _lanes:
   - -3
   - 0
@@ -2167,6 +2167,7 @@ MonoBehaviour:
   _gameMenuCanvas: {fileID: 1166469459}
   _deathController: {fileID: 1928240277}
   _loseScreenCanvas: {fileID: 1379476046}
+  _respawnButton: {fileID: 1253881758}
 --- !u!1 &1339785090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,9 +3134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169561e063120ec408366a42bafa1823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CenterPosition: {fileID: 1572243751}
-  LeftPosition: {fileID: 1792543095}
-  RightPosition: {fileID: 1028831780}
+  <CenterPosition>k__BackingField: {fileID: 1572243751}
+  <LeftPosition>k__BackingField: {fileID: 1792543095}
+  <RightPosition>k__BackingField: {fileID: 1028831780}
+  <playerAnimator>k__BackingField: {fileID: 0}
+  <playerRigidBody>k__BackingField: {fileID: 0}
+  <playerCollider>k__BackingField: {fileID: 0}
+  timePassed: 0
+  <expectedRollHeight>k__BackingField: 0
+  <normalHeightCollider>k__BackingField: 0
+  <currentPosition>k__BackingField: 0
 --- !u!136 &1928240279
 CapsuleCollider:
   m_ObjectHideFlags: 0

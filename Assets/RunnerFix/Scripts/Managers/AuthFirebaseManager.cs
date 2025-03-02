@@ -6,17 +6,18 @@ using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Threading.Tasks;
 
 public class AuthFirebaseManager : MonoBehaviour
 {
     [SerializeField] private GameObject _loginPanel, _registerPanel; // UI panels
 
-    // Login Fields
+    [Header("Login Fields")]
     [SerializeField] private TMP_InputField _loginEmailInput, _loginPasswordInput; 
     [SerializeField] private Button _loginButton, _goToRegisterButton; 
     [SerializeField] private TextMeshProUGUI _loginError;
 
-    // Register Fields
+    [Header("Register Fields")]
     [SerializeField] private TMP_InputField _registerEmailInput, _registerUsernameInput, _registerPasswordInput, _registerConfirmPasswordInput;
     [SerializeField] private Button _registerButton, _goToLoginButton;
     [SerializeField] private TextMeshProUGUI _registerError;
@@ -36,7 +37,7 @@ public class AuthFirebaseManager : MonoBehaviour
         CheckForExistingSession();
     }
 
-    private async System.Threading.Tasks.Task InitializeFirebase()
+    private async Task InitializeFirebase()
     {
         var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
         await dependencyTask;

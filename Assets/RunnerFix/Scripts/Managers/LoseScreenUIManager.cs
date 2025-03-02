@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.RunnerFix.Scripts;
 using Firebase.Extensions;
+using UnityEngine.UI;
 
 public class LoseScreenUIManager : MonoBehaviour
 {
@@ -19,8 +20,12 @@ public class LoseScreenUIManager : MonoBehaviour
     private FirebaseAuth _auth;
     private DatabaseReference _database;
 
+    [SerializeField] private Button _respawnButton;
+    private bool _hasRespawned = false;
+
     private async void Start()
     {
+        _respawnButton.interactable = true;
         _loseScreenCanvas.SetActive(false);
         _adManager = FindObjectOfType<AdManager>();
         _auth = FirebaseAuth.DefaultInstance;
@@ -128,13 +133,20 @@ public class LoseScreenUIManager : MonoBehaviour
     }
     public void ShowAdForRespawn()
     {
-        _adManager.ShowRewardedAd();
+        if (!_hasRespawned) 
+        {
+            _adManager.ShowRewardedAd();
+        }
     }
     public void Respawn()
     {
+        if (_hasRespawned) return;
         _interactor = _deathController.GetObstacle();
         _interactor.DestroyInteractorObstacle();
         Time.timeScale = 1f;
         _loseScreenCanvas.SetActive(false);
+
+        _hasRespawned = true; 
+        _respawnButton.interactable = false;
     }
 }

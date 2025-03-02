@@ -25,6 +25,15 @@ namespace Assets.RunnerFix.Scripts
             {
                 _player.SetState(new CrouchingState(_player));
             }
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || SwipeManager.DetectSwipeLeft())
+            {
+                _player.TurnLeft();
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || SwipeManager.DetectSwipeRight())
+            {
+                _player.TurnRight();
+            }
         }
         private IEnumerator ResetJump()
         {

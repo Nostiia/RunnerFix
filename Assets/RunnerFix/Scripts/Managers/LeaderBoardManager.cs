@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class LeaderBoardManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class LeaderBoardManager : MonoBehaviour
         
     }
 
-    private async System.Threading.Tasks.Task InitializeFirebase()
+    private async Task InitializeFirebase()
     {
         var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
         await dependencyTask;

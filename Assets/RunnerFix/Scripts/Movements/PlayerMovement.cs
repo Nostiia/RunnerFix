@@ -2,6 +2,7 @@ using Assets.RunnerFix.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 //state machine for movement,
 public class PlayerMovement : MonoBehaviour
@@ -16,18 +17,20 @@ public class PlayerMovement : MonoBehaviour
     internal bool isJump = false;
     internal bool isCrunch = false;
 
-    public Transform CenterPosition, LeftPosition, RightPosition;
+    [field: SerializeField] public Transform CenterPosition { get; private set; }
+    [field: SerializeField] public Transform LeftPosition { get; private set; }
+    [field: SerializeField] public Transform RightPosition { get; private set; }
 
-    internal Animator playerAnimator;
-    internal Rigidbody playerRigidBody;
-    internal CapsuleCollider playerCollider;
+    [field: SerializeField] public Animator playerAnimator { get; private set; }
+    [field: SerializeField] public Rigidbody playerRigidBody { get; private set; }
+    [field: SerializeField] public CapsuleCollider playerCollider { get; private set; }
 
-    internal float timePassed = 0f;
-    internal float expectedRollHeight;
-    internal float normalHeightCollider;
+    [field: SerializeField] public float timePassed = 0f;
+    [field: SerializeField] public float expectedRollHeight { get; private set; }
+    [field: SerializeField] public float normalHeightCollider { get; private set; }
 
     private PlayerState _currentState;
-    internal int currentPosition;
+    [field: SerializeField] public int currentPosition { get; private set; }
 
 
 
@@ -45,7 +48,38 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || SwipeManager.DetectSwipeLeft())
+        {
+            TurnLeft();
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || SwipeManager.DetectSwipeRight())
+        {
+            TurnRight();
+        }
+
+        // Smooth Transition to Lanes
+        Vector3 targetPosition = CenterPosition.position;
+        if (currentPosition == 1) targetPosition = LeftPosition.position;
+        if (currentPosition == 2) targetPosition = RightPosition.position;
+
+        transform.position = Vector3.Lerp(
+        transform.position,
+        new Vector3(targetPosition.x, transform.position.y, transform.position.z),
+            sideSpeed * Time.deltaTime
+        );
         _currentState?.Update();
+    }
+    public void TurnRight()
+    {
+        if (currentPosition == 0) currentPosition = 2;
+        else if (currentPosition == 1) currentPosition = 0;
+    }
+    public void TurnLeft()
+    {
+        if (currentPosition == 0) currentPosition = 1;
+        else if (currentPosition == 2) currentPosition = 0;
     }
 
     public void SetState(PlayerState _newState)
