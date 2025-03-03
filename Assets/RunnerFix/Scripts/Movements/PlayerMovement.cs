@@ -2,20 +2,19 @@ using Assets.RunnerFix.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 //state machine for movement,
 public class PlayerMovement : MonoBehaviour
 {
-    internal float forwardSpeed;
-    internal float sideSpeed = 3f;
-    internal float jumpForce = 7f;
-    internal float speedIncreaseInterval = 5f;
-    internal float speedIncreaseAmount = 1f;
-    internal float initialSpeed = 3f;
-    internal bool isPlaying = false;
-    internal bool isJump = false;
-    internal bool isCrunch = false;
+    [field: SerializeField] public float forwardSpeed;
+    [field: SerializeField] public float sideSpeed = 3f;
+    [field: SerializeField] public float jumpForce = 7f;
+    [field: SerializeField] public float speedIncreaseInterval = 5f;
+    [field: SerializeField] public float speedIncreaseAmount = 1f;
+    [field: SerializeField] public float initialSpeed = 3f;
+    [field: SerializeField] public bool isPlaying = false;
+    [field: SerializeField] public bool isJump = false;
+    [field: SerializeField] public bool isCrunch = false;
 
     [field: SerializeField] public Transform CenterPosition { get; private set; }
     [field: SerializeField] public Transform LeftPosition { get; private set; }
