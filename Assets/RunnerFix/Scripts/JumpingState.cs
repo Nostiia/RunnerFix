@@ -13,6 +13,7 @@ namespace Assets.RunnerFix.Scripts
         public JumpingState(PlayerMovement player) : base(player) { }
         public override void Enter()
         {
+            if (_player.isJump) return;
             _player.isJump = true;
             _player.playerAnimator.SetBool("isJump", true);
             _player.playerRigidBody.AddForce(Vector3.up * _player.jumpForce, ForceMode.Impulse);

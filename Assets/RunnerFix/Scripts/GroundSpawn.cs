@@ -18,12 +18,14 @@ public class GroundSpawn : MonoBehaviour
     {
         _lastPlayerZ = _player.position.z - _positionPause;
         SpawnGround();
+        SpawnGround();
     }
 
     void Update()
     {
         if(_player.position.z > _lastPlayerZ + _lengthOfGround)
         {
+            SpawnGround();
             SpawnGround();
             _lastPlayerZ = _player.position.z;
         }

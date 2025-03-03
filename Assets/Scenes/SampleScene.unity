@@ -14,8 +14,13 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
+<<<<<<< Updated upstream:Assets/Scenes/SampleScene.unity
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+=======
+  m_Fog: 1
+  m_FogColor: {r: 0.10980392, g: 0.12941177, b: 0.11360656, a: 1}
+>>>>>>> Stashed changes:Assets/RunnerFix/Scenes/SampleScene.unity
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -451,6 +456,26 @@ PrefabInstance:
       propertyPath: m_ChildForceExpandHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 570484596308763730, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 570484596308763730, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 570484596308763730, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 570484596308763730, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 576552947179421131, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -526,6 +551,51 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2044004601050508689, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044004601050508689, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044004601050508689, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044004601050508689, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2044004601050508689, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265236110660233207, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.92156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265236110660233207, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265236110660233207, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265236110660233207, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.46666667
+      objectReference: {fileID: 0}
     - target: {fileID: 2371712185378412403, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -565,7 +635,62 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HorizontalScrollbar
       value: 
+<<<<<<< Updated upstream:Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 2103674989}
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565364695399522727, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565364695399522727, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e985b7706a8a7ae4f8199a0a995ca4ad,
+        type: 2}
+    - target: {fileID: 4255845678928893906, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255845678928893906, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255845678928893906, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255845678928893906, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484155963060441523, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484155963060441523, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484155963060441523, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484155963060441523, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686275
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/RunnerFix/Scenes/SampleScene.unity
     - target: {fileID: 5035329552806701241, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -575,6 +700,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424204595933843327, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424204595933843327, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424204595933843327, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424204595933843327, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5805160908687436141, guid: 78f2fb3cb85e9474a9cdce59ad8ce27f,
         type: 3}
@@ -1058,8 +1203,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e985b7706a8a7ae4f8199a0a995ca4ad, type: 2}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1191,7 +1336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d9fb05f37d7ccb4aadf648d321745b9, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 43fae8a6478a3cb43966c32f1bebd22b, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1935,8 +2080,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6ef7c943af2eb5c4f885e9ca83fca6e0, type: 2}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2318,7 +2463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2328,7 +2473,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 100
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
@@ -2565,7 +2710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 478c696316753b748a6db51669741c6a, type: 2}
+  m_Sprite: {fileID: 21300000, guid: c714f1688851bc044849307bc74e837a, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2712,7 +2857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2722,7 +2867,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 100
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -3150,7 +3295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0bf636d9b01ef684aa82d886211bdeed, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 8e76561a7da15f146adcc700042fcc82, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

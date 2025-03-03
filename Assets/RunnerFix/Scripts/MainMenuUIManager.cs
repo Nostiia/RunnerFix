@@ -10,7 +10,12 @@ public class MainMenuUIManager : MonoBehaviour
 
     [SerializeField] private GameObject _leaderboardPanel; 
     private bool _gameStarted = false;
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/MainMenuUIManager.cs
     void Start()
+=======
+    private bool _isLeaderboardActivated = false;
+    private void Start()
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/MainMenuUIManager.cs
     {
         _gameMenuCanvas.SetActive(false);
         _mainMenuCanvas.SetActive(true);
@@ -19,12 +24,23 @@ public class MainMenuUIManager : MonoBehaviour
     {
         if (!_gameStarted && (Input.GetMouseButtonDown(0) || Input.touchCount > 0))
         {
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/MainMenuUIManager.cs
             if (!IsPointerOverUI() && !_leaderboardPanel.activeSelf) 
+=======
+            if (!IsPointerOverUI() && !_isLeaderboardActivated) 
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/MainMenuUIManager.cs
             {
                 StartGame();
             }
         }
     }
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/MainMenuUIManager.cs
+=======
+    public void LeaderboardPanel(bool activated)
+    {
+        _isLeaderboardActivated = activated;
+    }
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/MainMenuUIManager.cs
     public void StartGame()
     {
         if (_gameStarted) return;
@@ -37,7 +53,7 @@ public class MainMenuUIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Game Quit!");
+        //Debug.Log("Game Quit!");
     }
     private bool IsPointerOverUI()
     {

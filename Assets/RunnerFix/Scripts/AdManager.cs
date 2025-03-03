@@ -9,6 +9,7 @@ public class AdManager : MonoBehaviour
     private static AdManager Instance;
     private void Awake()
     {
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/AdManager.cs
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -17,6 +18,9 @@ public class AdManager : MonoBehaviour
         {
             Instance = this;
         }
+=======
+        _instance = this;
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/AdManager.cs
     }
     public void Start()
     {

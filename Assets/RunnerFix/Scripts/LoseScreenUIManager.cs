@@ -6,6 +6,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.RunnerFix.Scripts;
 using Firebase.Extensions;
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/LoseScreenUIManager.cs
+=======
+using UnityEngine.UI;
+using System.Threading.Tasks;
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/LoseScreenUIManager.cs
 
 public class LoseScreenUIManager : MonoBehaviour
 {
@@ -26,7 +31,11 @@ public class LoseScreenUIManager : MonoBehaviour
         _auth = FirebaseAuth.DefaultInstance;
         await InitializeFirebase();
     }
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/LoseScreenUIManager.cs
     async System.Threading.Tasks.Task InitializeFirebase()
+=======
+    private async Task InitializeFirebase()
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Managers/LoseScreenUIManager.cs
     {
         var dependencyTask = FirebaseApp.CheckAndFixDependenciesAsync();
         await dependencyTask;
@@ -100,10 +109,7 @@ public class LoseScreenUIManager : MonoBehaviour
                             }
                         });
                     }
-                    else
-                    {
-                        Debug.Log($"Score {_score} is lower than current max {_currentMaxScore}. Not updating.");
-                    }
+                    
                 }
                 else
                 {

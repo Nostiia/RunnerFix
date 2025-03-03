@@ -34,6 +34,18 @@ public class RunningState : PlayerState
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S) || SwipeManager.DetectSwipeDown())
         {
             _player.SetState(new CrouchingState(_player));
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/RunningState.cs
+=======
+        }      
+    }  
+    private void IncreaseSpeed()
+    {
+        if (_player.timePassed >= _player.speedIncreaseInterval)
+        {
+            _player.forwardSpeed += _player.speedIncreaseAmount;
+            //Debug.Log($"New speed: {_player.forwardSpeed}");
+            _player.timePassed = 0f;
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Movements/RunningState.cs
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || SwipeManager.DetectSwipeLeft())

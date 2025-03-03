@@ -18,12 +18,17 @@ public class ObstaclesSpawner : MonoBehaviour
     private int _lastSpawnedLane = 0;
     private bool _gameIsStrated = false;
 
+<<<<<<< Updated upstream:Assets/RunnerFix/Scripts/ObstaclesSpawner.cs
     private float _secondWithoutObstacles = 5f;
     void Start()
     {
         
     }
     void StartSpawning()
+=======
+    private float _secondWithoutObstacles = 2f;
+     private void StartSpawning()
+>>>>>>> Stashed changes:Assets/RunnerFix/Scripts/Spawners/ObstaclesSpawner.cs
     {
         _gameIsStrated = true;
     }
